@@ -1,0 +1,61 @@
+---
+import HTMLIcon from "./icons/HTMLIcon.astro";
+import CSSIcon from "./icons/CSS.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import JavascriptIcon from "./icons/JavascriptIcon.astro";
+
+const TAGS = {
+    HTML : {
+        name: "HTML5",
+        class: "bg-black text-white",
+        icon: HTMLIcon
+    },
+    CSS : {
+        name: "CSS",
+        class: "",
+        icon: CSSIcon
+    },
+    TAILWIND : {
+        name : "TailWindCSS",
+        class: "",
+        icon: TailwindIcon
+    },
+    JAVASCRIPT : {
+        name : "JavaScript",
+        class: "",
+        icon: JavascriptIcon
+    }
+}
+const PROJECTS = [
+    {
+        title: 'Portfolio Fran Riera',
+        description: 'Portflio donde se especifican experiencias, estudios y proyectos realizados.',
+        link: '#',
+        github: '#',
+        image: '#',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.TAILWIND]
+    }
+]
+---
+{
+    PROJECTS.map(({ title, description, tags , image}) => (
+        <article>
+            <h3 class="text-3xl font-semibold text-[#00868E] mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-4 flex-row">
+                {tags.map(tag => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                            <tag.icon class="size-6" /> 
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img 
+                class ="rounded shadow-2xl shadow-white/10"
+                src={image} 
+                alt={`Captura de pantalla del proyecto ${image}`} />
+        </article>
+    ))
+}
