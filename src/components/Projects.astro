@@ -1,30 +1,87 @@
 ---
 import HTMLIcon from "./icons/HTMLIcon.astro";
 import CSSIcon from "./icons/CSS.astro";
-import TailwindIcon from "./icons/TailwindIcon.astro";
 import JavascriptIcon from "./icons/JavascriptIcon.astro";
+import BootstrapIcon from "./icons/Bootstrap.astro";
+import PHPIcon from "./icons/PHPIcon.astro";
+import SQLServerIcon from "./icons/SQLIcon.astro"
+import AstroIcon from "./icons/AstroIcon.astro";
+import DockerIcon from "./icons/DockerIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import GitIcon from "./icons/GitIcon.astro";
+import WarpIcon from "./icons/WarpIcon.astro";
+import VSCodeIcon from "./icons/VSCodeIcon.astro";
+import NPMIcon from "./icons/Npmicon.astro";
+import HomebrewIcon from "./icons/HomebrewIcon.astro";
+import WordPressIcon from "./icons/WordPressIcon.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro"; 
 
-const TAGS = {
+export const TAGS = {
     HTML : {
         name: "HTML5",
-        class: "bg-black text-white",
         icon: HTMLIcon
     },
     CSS : {
         name: "CSS",
-        class: "",
         icon: CSSIcon
     },
+    JAVASCRIPT : {
+        name: "JavaScript",
+        icon: JavascriptIcon
+    },
+    BOOTSTRAP : {
+        name: "Bootstrap",
+        icon: BootstrapIcon
+    },
+    PHP : {
+        name: "PHP",
+        icon: PHPIcon
+    },
+    SQLSERVER : {
+        name: "SQL Server",
+        icon: SQLServerIcon
+    },
+    ASTRO : {
+        name: "Astro",
+        icon: AstroIcon
+    },
+    DOCKER : {
+        name: 'Docker',
+        icon: DockerIcon
+    },
     TAILWIND : {
-        name : "TailWindCSS",
-        class: "",
+        name: "TailWindCSS",
         icon: TailwindIcon
     },
-    JAVASCRIPT : {
-        name : "JavaScript",
-        class: "",
-        icon: JavascriptIcon
-    }
+    GIT : {
+        name: "GIT",
+        icon: GitIcon
+    },
+    GITHUB : {
+        name: "GIT Hub",
+        icon: GitHubIcon
+    },
+    WARP : {
+        name: "Warp",
+        icon: WarpIcon
+    },
+    VSCODE : {
+        name: 'VSCode',
+        icon: VSCodeIcon 
+    },
+    NPM : {
+        name: 'NPM',
+        icon: NPMIcon
+    },
+    HOMEBREW : {
+        name: 'Homebrew',
+        icon: HomebrewIcon
+    },
+    WORDPRESS : {
+        name: 'WordPress',
+        icon: WordPressIcon
+    },
+
 }
 const PROJECTS = [
     {
@@ -34,6 +91,20 @@ const PROJECTS = [
         github: '#',
         image: 'https://placehold.co/800x600',
         tags: [TAGS.HTML, TAGS.CSS, TAGS.TAILWIND]
+    },
+    {
+        title: 'FEMO Ingenieria',
+        description: 'Empresa dedicada al calculo de estructuras.',
+        link: 'https://femoingenieria.com/',
+        image: 'https://placehold.co/800x600',
+        tags: [TAGS.WORDPRESS]
+    },
+    {
+        title: 'Restaurante HERO',
+        description: 'Empresa de restauración en Denia, Alicante.',
+        link: 'https://restauranteherodenia.com/',
+        image: 'https://placehold.co/800x600',
+        tags: [TAGS.WORDPRESS]
     }
 ]
 ---
