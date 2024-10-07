@@ -1,18 +1,19 @@
 ---
 export interface Props {
   title: string
+  enterprise: string
   description: string
   link?: string
   date: string
 }
 
-const { title, description, link, date} = Astro.props;
+const { title, enterprise, description, link, date} = Astro.props;
 ---
 
 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{date}</time>
-        <h3 class="text-lg font-semibold text-[#00868E] mt-2">{title}</h3>
-        <p class="mb-4 text-base font-normal text-gray-200 text-pretty">{description}</p>
+        <h3 class="text-xl font-bold text-white mt-2">{title} · </span><span class="font-light text-md">{enterprise}</span></h3>
+        <time class="mb-1 text-sm font-semibold leading-none text-gray-200">{date}</time>
+        <p class="mb-4 text-base font-normal text-gray-400 text-pretty">{description}</p>
         {
           link && (
           <a href={link} class="inline-flex rounded-lg border border-white/10 gap-x-3 py-1 px-2 text-xs md:text-base md:py-2 lg:px-4 bg-white/5 hover:scale-110 hover:bg-[#00868E] transition">Saber más ... {" "} <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
