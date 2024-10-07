@@ -17,26 +17,32 @@ import Projects from '../components/Projects.astro';
 	description="Contrata a Fran Riera para crear tu aplicación web. Desarrollador web."
 >
 	<main class="px-6">
-		<SectionContainer class="py-44 pb-20">
+		<SectionContainer class="flex flex-col justify-center items-center mt-4 py-20 pb-20">
+
 			<img 
-				class="rounded-full size-28 mb-4" 
+				class="rounded-full size-40 mb-4" 
 				src="https://avatars.githubusercontent.com/u/43618868?v=4" 
 				alt="franriera photo"
 			/>
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-					Hey, soy Fran Riera <a
+			<p class="text-xl pb-2 lg:pb-1">Hola 👋🏻, soy </p>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-3">
+				Fran Riera <a
 					href="https://www.linkedin.com/in/franrd"
 					target="_blank"
 					rel="noopener"
 					class="flex justify-center items-center"
 				>
-					<Badge>Open to Work</Badge>
 				</a>
 			</h1>
-			<h2 class="text-xl lg:text-2xl text-pretty max-w-[700px]">
-				<span>+15 años de experiencia. </span><span class="text-[#00868E]">Desarrollador Web y Creador de Contenido</span>.
-				<span class="text-yellow-200/90"> De Alicante, España</span>.<span class="opacity-75"> Especializado en crear aplicaciones únicas.</span>
+			
+			<h2 class="text-center text-xl lg:text-2xl text-pretty max-w-[800px]">
+				<span class="text-white">Desarrollador Web apasionado por el </span>
+				<span class="text-[#00868E]">frontend</span>.<br>
+				<span class="text-yellow-200/90">De Alicante, España.</span>
+				<span class="opacity-75">Especializado en crear aplicaciones únicas.</span>
 			</h2>
+
+			<Badge>Open to Work</Badge>
 
 			<nav class="flex gap-4 mt-8 flex-wrap">
 					<SocialPill href="https://www.linkedin.com/in/franrd/">
@@ -50,6 +56,9 @@ import Projects from '../components/Projects.astro';
 					<SocialPill href="mailto:franrd98@outlook.com">
 						<MailIcon class="size-4 md:size-6"/>
 							franrd98@outlook.com
+					</SocialPill>
+					<SocialPill href="#">
+						Descargar CV
 					</SocialPill>
 				</nav>
 			</SectionContainer>
@@ -68,6 +77,18 @@ import Projects from '../components/Projects.astro';
 				Proyectos
 			</h2>
 			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				Sobre mí
+			</h2>
+		</SectionContainer>
+		
+		<SectionContainer id="skills">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				SKILLS
+			</h2>
 		</SectionContainer>
 
 	</main>
