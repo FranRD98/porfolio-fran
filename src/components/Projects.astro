@@ -106,12 +106,12 @@ const PROJECTS = [
             <img class ="w-1/2 object-cover rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
             
             <article class="w-1/2 p-4">
-                <h3 class="text-3xl font-semibold text-white mb-2">{title}</h3>
-                <p class="text-lg mb-4 text-pretty text-gray-400">{description}</p>
+                <h3 class="text-3xl font-semibold mb-2">{title}</h3>
+                <p class="text-lg mb-4 text-pretty text-[#424c55]">{description}</p>
                 <ul class="flex gap-x-4 flex-row">
                     {tags.map(tag => (
                         <li>
-                            <span class={`flex gap-x-2 rounded-full text-sm bg-[#00868E] py-2 px-4`}>
+                            <span class={`flex gap-x-2 rounded-full text-sm bg-[#00868E] text-white py-2 px-4`}>
                                 <!-- <tag.icon class="size-6" />-->
                                 {tag.name}
                             </span>
