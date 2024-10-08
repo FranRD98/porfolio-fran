@@ -85,32 +85,24 @@ export const TAGS = {
 }
 const PROJECTS = [
     {
-        title: 'Porfolio Fran Riera',
-        description: 'Porflio donde se especifican experiencias, estudios y proyectos realizados.',
-        link: '#',
-        github: '#',
-        image: 'https://placehold.co/800x600',
-        tags: [TAGS.HTML, TAGS.CSS, TAGS.TAILWIND]
-    },
-    {
         title: 'FEMO Ingenieria',
         description: 'Empresa dedicada al calculo de estructuras.',
         link: 'https://femoingenieria.com/',
-        image: 'https://placehold.co/800x600',
+        image: '/projects/images/FEMOIngenieria.jpg',
         tags: [TAGS.WORDPRESS]
     },
     {
         title: 'Restaurante HERO',
         description: 'Empresa de restauración en Denia, Alicante.',
         link: 'https://restauranteherodenia.com/',
-        image: 'https://placehold.co/800x600',
+        image: '/projects/images/RestauranteHero.jpg',
         tags: [TAGS.WORDPRESS]
     }
 ]
 ---
 {
     PROJECTS.map(({ title, description, tags , image}) => (
-        <div id="proyecto" class="flex">
+        <div id="proyecto" class="flex items-center py-6">
             <img class ="w-1/2 object-cover rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
             
             <article class="w-1/2 p-4">
